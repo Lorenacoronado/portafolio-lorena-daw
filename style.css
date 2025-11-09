@@ -1,0 +1,373 @@
+/* =========================================== */
+/* 1. VARIABLES GLOBALES Y RESET BASICO */
+/* =========================================== */
+
+:root {
+    /* Paleta de Colores Principal */
+    --color-primary: #00bcd4;       /* Turquesa Vivo (Botones, Titulares) */
+    --color-secondary: #00838f;      /* Turquesa Oscuro (Botones Secundarios) */
+    --color-dark: #1f2937;          /* Azul Oscuro/Negro (Header, Hero) */
+    --color-light: #f9fafb;         /* Blanco/Gris Claro (Fondo de Contenido) */
+    --color-text: #374151;          /* Gris Oscuro para Texto */
+    --color-gray-bg: #e5e7eb;       /* Fondo de la sección de Proyectos */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-light); 
+}
+
+/* Estilos de Enlaces */
+a {
+    text-decoration: none; 
+    color: var(--color-primary);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Contenedor principal que limita el ancho de todo el contenido */
+.content-wrapper {
+    max-width: 1100px; 
+    margin: 0 auto;    
+}
+
+/* Estilos para el título general de las secciones */
+h2 {
+    font-size: 2rem;
+    color: var(--color-dark);
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* =========================================== */
+/* 2. HEADER Y NAVEGACIÓN SUPERIOR */
+/* =========================================== */
+
+.main-header {
+    background: var(--color-dark);
+    color: var(--color-light);
+    padding: 1rem 2%; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de iconos de habilidades */
+.header-icons {
+    display: flex; 
+    gap: 10px; 
+    font-size: 1.5rem; 
+    color: var(--color-primary); 
+}
+
+/* Menú de navegación */
+.main-nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: var(--color-light);
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--color-primary);
+}
+
+/* Estilos para el BOTÓN DE IDIOMA (resaltado) */
+#language-switcher {
+    margin-left: 25px; 
+}
+
+#language-switcher a {
+    color: var(--color-primary) !important; 
+    border: 1px solid var(--color-primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+#language-switcher a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-dark) !important;
+}
+
+/* =========================================== */
+/* 3. SECCIÓN HERO (CABECERA PRINCIPAL) */
+/* =========================================== */
+
+.hero-section {
+    background: var(--color-dark);
+    color: var(--color-light);
+    padding: 50px 5%; 
+    min-height: 400px; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-around; 
+    width: 100%; 
+    gap: 40px;
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+}
+
+.hero-content {
+    max-width: 50%; 
+    text-align: left; 
+}
+
+/* Mi Nombre (LORENA CORONADO) - h2 */
+.hero-content h2 {
+    font-size: 2.2rem; 
+    color: var(--color-light); 
+    font-family: 'Poppins', serif; 
+    font-weight: 600; 
+    margin-bottom: 30px; 
+}
+
+/* Titular Principal (h1) - Destacado en Turquesa */
+.hero-content h1 {
+    font-size: 3rem; 
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--color-primary); 
+    text-align: left;
+    line-height: 1.1; 
+}
+
+/* Frase secundaria */
+.hero-content p {
+    color: var(--color-light);
+    font-size: 1.4rem; 
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Botón "Ver Proyectos" */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-dark) !important;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    border: none; 
+    cursor: pointer; 
+}
+
+.cta-button:hover {
+    background-color: #00d7f2;
+}
+
+/* Imagen y Botones Sociales (Control de contenedor) */
+.hero-image-container {
+    max-width: 300px;
+    flex-shrink: 0;
+    text-align: center; 
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; 
+}
+
+/* Botones Sociales (GitHub/LinkedIn) bajo la imagen */
+.hero-social-links {
+    margin-top: 20px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+}
+
+.hero-social-links a {
+    display: flex; 
+    align-items: center;
+    gap: 8px; 
+    background-color: var(--color-secondary); 
+    color: var(--color-light) !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-social-links a i {
+    font-size: 1.3rem; 
+}
+
+.hero-social-links a:hover {
+    background-color: var(--color-primary);
+    transform: scale(1.05);
+}
+
+/* =========================================== */
+/* 4. SECCIONES DE CONTENIDO (ACERCA DE MÍ, PROYECTOS) */
+/* =========================================== */
+
+section {
+    padding: 60px 5%;
+    width: 100%; 
+    margin: 0 auto;
+}
+
+/* 4.1 ACERCA DE MÍ */
+.about-section {
+    background-color: var(--color-light);
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px; 
+}
+
+/* Párrafos Justificados */
+.about-section p {
+    font-size: 1.1rem;
+    text-align: justify; 
+    margin-bottom: 15px;
+}
+
+/* Lista de tecnologías */
+.about-section ul {
+    text-align: justify;
+    list-style: disc;
+    margin-left: 35px;
+    padding: 10px 0;
+}
+
+.about-section ul li {
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+/* 4.2 MIS PROYECTOS */
+.projects-section {
+    background-color: var(--color-gray-bg);
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 40px; 
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+}
+
+/* Tarjetas de Proyecto Individuales */
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); 
+}
+
+.project-card h3 {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.coming-soon {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* Botón del Formulario (Estilos que NO usaremos por ahora, pero se quedan limpios) */
+.submit-button {
+    width: 100%; 
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.submit-button:hover {
+    opacity: 0.9;
+}
+
+/* =========================================== */
+/* 5. FOOTER Y RESPONSIVE */
+/* =========================================== */
+
+/* Pie de página */
+.main-footer {
+    background: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    padding: 20px 5%;
+}
+
+.social-links a {
+    color: var(--color-primary);
+    margin: 0 10px;
+    font-weight: 700;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+
+/* Media Queries: Diseño para Móviles (Pantallas de 850px o menos) */
+@media (max-width: 850px) {
+    
+    .hero-section {
+        flex-direction: column; 
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .hero-content, .hero-content h1, .hero-content p {
+        text-align: center; 
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image-container {
+        order: -1; 
+        margin-bottom: 20px;
+    }
+    
+    /* Ocultar la barra de iconos de lenguajes en móvil */
+    .header-icons {
+        display: none;
+    }
+}
