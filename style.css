@@ -230,12 +230,7 @@ section {
     margin-bottom: 15px;
 }
 
-/* Párrafo dentro de la tarjeta de proyecto (para separarlo del enlace) */
-.project-card p {
-    margin-bottom: 15px; 
-}
-
-/* FRASE DENTRO DE "ACERCA DE MÍ" */
+/* CONTENEDOR FRASE EN ACERCA DE MÍ */
 .dev-quote-container {
     margin-top: 60px; 
     margin-bottom: 40px; 
@@ -249,7 +244,6 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* FRASE DE ARRIBA (Cita) */
 .dev-quote-preface {
     font-family: 'Courier New', Courier, monospace; 
     display: block;
@@ -260,7 +254,6 @@ section {
     text-align: center; 
 }
 
-/* FRASE DE ABAJO (Cita) */
 .dev-quote-container blockquote {
     font-family: 'Courier New', Courier, monospace; 
     font-size: 1.2em; 
@@ -294,6 +287,24 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
+/* Párrafo dentro de la tarjeta de proyecto */
+.project-card p {
+    margin-bottom: 5px; /* Reducir el margen inferior del párrafo */
+}
+
+/* Enlace "Ver Código" */
+.project-card .project-link {
+    margin-top: 15px; /* Añade espacio arriba para separarlo del texto */
+    display: inline-block; /* Asegura que el margen funcione correctamente */
+    font-weight: 700;
+}
+
+/* Efecto gris en "Próximamente" */
+.coming-soon {
+    opacity: 0.5; /* Hace que la tarjeta se vea más transparente/grisácea */
+    cursor: default;
+}
+
 
 /* =========================================== */
 /* 5. PIE DE PÁGINA Y RESPONSIVE */
@@ -312,12 +323,12 @@ section {
     color: #00bcd4; 
     margin: 0 10px;
     font-weight: 700;
-    text-decoration: none; /* Asegura que no haya subrayado */
+    text-decoration: none; 
     transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: #f9fafb; /* Color blanco al pasar el ratón para destacar */
+    color: #f9fafb; 
 }
 
 .social-links {
