@@ -299,11 +299,29 @@ section {
 /* 5. PIE DE PÁGINA Y RESPONSIVE */
 /* =========================================== */
 
+/* Pie de página */
 .main-footer {
     background: #1f2937; 
     color: #f9fafb; 
     text-align: center;
     padding: 20px 5%;
+}
+
+/* Enlaces del Pie de Página (LinkedIn/GitHub) */
+.social-links a {
+    color: #00bcd4; 
+    margin: 0 10px;
+    font-weight: 700;
+    text-decoration: none; /* Asegura que no haya subrayado */
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #f9fafb; /* Color blanco al pasar el ratón para destacar */
+}
+
+.social-links {
+    margin-top: 10px;
 }
 
 
@@ -318,10 +336,6 @@ section {
     .hero-content {
         text-align: center; 
         max-width: 100%;
-    }
-    
-    .hero-image-container {
-        max-width: 100%; 
     }
 
     /* Ocultar la barra de iconos de lenguajes en móvil */
