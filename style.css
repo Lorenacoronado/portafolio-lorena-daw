@@ -104,7 +104,7 @@ ul {
 
 
 /* =========================================== */
-/* 3. SECCIÓN PRINCIPAL E IMAGEN */
+/* 3. SECCIÓN PRINCIPAL E IMAGEN (HERO) */
 /* =========================================== */
 
 .hero-section {
@@ -126,23 +126,36 @@ ul {
     text-align: left; 
 }
 
-/* Tu Nombre (h2) */
+/* MI NOMBRE (h2): */
 .hero-content h2 {
     font-size: 2.2rem; 
-    color: #f9fafb; /* Letra Blanca */
+    color: #f9fafb; 
     font-family: 'Poppins', serif; 
     font-weight: 600; 
-    margin-bottom: 30px; 
+    
+    margin-bottom: 25px; /* Espaciado para separar del h1 */
+    
+    padding-bottom: 5px;
+    border-bottom: 2px solid #00bcd4; /* Linea turquesa */
+    display: inline-block; /* Para que la línea solo cubra el ancho del texto */
 }
 
-/* Titular Principal (h1) */
+/* TITULO PRINCIPAL (h1) */
 .hero-content h1 {
     font-size: 3rem; 
     margin-bottom: 20px;
     font-weight: 700;
-    color: #00bcd4; /* Turquesa Vivo (El que más destaca) */
+    color: #00bcd4; 
     text-align: left;
     line-height: 1.1; 
+}
+
+/* Frase secundaria */
+.hero-content p {
+    color: #f9fafb; 
+    font-size: 1.4rem; 
+    margin-bottom: 30px;
+    text-align: left;
 }
 
 /* Botón "Ver Proyectos" */
@@ -158,13 +171,20 @@ ul {
 }
 
 
-/* Botones Sociales (GitHub/LinkedIn) bajo la imagen */
+/* Imagen y Botones Sociales (Control de contenedor) */
 .hero-image-container {
-    max-width: 300px;
+    max-width: 300px; /* ANCHO MÁXIMO DEFINIDO */
     flex-shrink: 0;
     text-align: center; 
 }
 
+.hero-image-container img { /* HACE LA IMAGEN RESPONSIVE */
+    max-width: 100%;
+    height: auto; /* Evita que la imagen se estire */
+    border-radius: 8px;
+}
+
+/* Botones Sociales (GitHub/LinkedIn) bajo la imagen */
 .hero-social-links {
     margin-top: 20px; 
     display: flex; 
@@ -176,8 +196,8 @@ ul {
     display: flex; 
     align-items: center;
     gap: 8px; 
-    background-color: #00838f; /* Turquesa Oscuro */
-    color: #f9fafb !important; /* Letra Blanca */
+    background-color: #00838f; 
+    color: #f9fafb !important; 
     padding: 8px 15px;
     border-radius: 5px;
     font-weight: 600;
@@ -197,7 +217,7 @@ section {
 
 /* 4.1 ACERCA DE MÍ (La caja de contenido) */
 .about-section {
-    background-color: #f9fafb; /* Fondo Blanco */
+    background-color: #f9fafb; 
     border-radius: 10px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     margin-bottom: 20px; 
@@ -210,7 +230,12 @@ section {
     margin-bottom: 15px;
 }
 
-/* CITA DE PROGRAMACIÓN DENTRO DE ACERCA DE MÍ */
+/* Párrafo dentro de la tarjeta de proyecto (para separarlo del enlace) */
+.project-card p {
+    margin-bottom: 15px; 
+}
+
+/* FRASE DENTRO DE "ACERCA DE MÍ" */
 .dev-quote-container {
     margin-top: 60px; 
     margin-bottom: 40px; 
@@ -218,35 +243,38 @@ section {
     margin-right: auto;
     max-width: 1000px; 
     padding: 30px; 
-    background-color: #1f2937; /* Fondo Azul Oscuro */
+    background-color: #1f2937; 
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* FRASE DE ARRIBA (Cita) */
 .dev-quote-preface {
     font-family: 'Courier New', Courier, monospace; 
     display: block;
     font-size: 0.9em; 
-    color: #9ca3af; /* Gris claro */
+    font-weight: bold;
+    color: #cfd8e9; 
     margin-bottom: 10px;
     text-align: center; 
 }
 
+/* FRASE DE ABAJO (Cita) */
 .dev-quote-container blockquote {
     font-family: 'Courier New', Courier, monospace; 
     font-size: 1.2em; 
     font-weight: bold;
-    color: #00bcd4; /* Turquesa Vivo */
+    color: #00bcd4; 
     font-style: italic;
     margin: 0;
-    text-align: center;
+    text-align: center; 
 }
 
 
 /* 4.2 MIS PROYECTOS */
 .projects-section {
-    background-color: #e5e7eb; /* Fondo Gris Suave */
+    background-color: #e5e7eb; 
     border-radius: 10px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     margin-bottom: 40px; 
@@ -254,7 +282,6 @@ section {
 
 .projects-grid {
     display: grid;
-    /* Responsive: mínimo de 300px por columna */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
 }
@@ -272,10 +299,9 @@ section {
 /* 5. PIE DE PÁGINA Y RESPONSIVE */
 /* =========================================== */
 
-/* Pie de página */
 .main-footer {
-    background: #1f2937; /* Azul Oscuro */
-    color: #f9fafb; /* Letra Blanca */
+    background: #1f2937; 
+    color: #f9fafb; 
     text-align: center;
     padding: 20px 5%;
 }
@@ -285,13 +311,17 @@ section {
 @media (max-width: 850px) {
     
     .hero-section {
-        flex-direction: column; /* Apila elementos en vertical */
+        flex-direction: column; 
         text-align: center;
     }
     
     .hero-content {
         text-align: center; 
         max-width: 100%;
+    }
+    
+    .hero-image-container {
+        max-width: 100%; 
     }
 
     /* Ocultar la barra de iconos de lenguajes en móvil */
